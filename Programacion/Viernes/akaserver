@@ -1,0 +1,8 @@
+Cliente=AKA
+Resultado=NotToday
+Servidor=AKASERVER
+Tipo=SNAPSHOT
+Otro=**
+Unidad=C,HD1-1,HD1-2,HD2-1
+DiaSemana=DiaSemana
+Destino=\\192.168.200.3\Backups\Snapshot\*

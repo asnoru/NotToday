@@ -1,6 +1,14 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+__author__ = "Luis Javier Reyes Camacho"
+__credits__ = []
+__license__ = "AGPL3"
+__version__ = "1.0.1"
+__maintainer__ = "Luis Javier Reyes Camacho"
+__email__ = "asnoru@disroot.org"
+__status__ = "Pruebas"
+
 from datetime import datetime
 from os import mkdir, name, path, getcwd, listdir
 from pathlib import Path
@@ -60,7 +68,7 @@ def EnviaAccess(CLIENTE, RESULTADO, SERVIDOR, APLICACION, OTRO, UNIDAD, DiaSeman
 	RESULTADO = "NotToday"  # Mensaje predefinido
 	SERVIDOR = "Servidor"  # Nombre del Servidor
 	APLICACION = "SNAPSHOT"  # Aplicación de Backup
-	OTRO = "NotToday"  # Campo Desconocido
+	Tipo = "NotToday"  # Campo Desconocido
 	UNIDAD = "C"  # Unidad ahora
 	DiaSemana = "DOMINGO"  # DiaSemana
 	DESTINO = "Infierno"  # Ruta Destino
@@ -68,9 +76,9 @@ def EnviaAccess(CLIENTE, RESULTADO, SERVIDOR, APLICACION, OTRO, UNIDAD, DiaSeman
 	HORA = "08:30" # Hora
 	"""
 	# Ejecutar la consulta.
-	cursor.execute(u"INSERT INTO Resultados (CLIENTE, RESULTADO, SERVIDOR, APLICACION, OTRO, UNIDAD, DiaSemana, DESTINO, FECHA, HORA) VALUES (?, ?, "
-				"?, ?, ?, ?, ?, ?, ?, ?)",
-				CLIENTE, RESULTADO, SERVIDOR, APLICACION, OTRO, UNIDAD, DiaSemana, DESTINO, FechaAccess, HoraAccess)
+	cursor.execute(u"INSERT INTO Resultados (CLIENTE, RESULTADO, SERVIDOR, APLICACION, TIPO, UNIDAD, DiaSemana, DESTINO, FECHA, HORA) "
+				"VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+				CLIENTE, RESULTADO, SERVIDOR, APLICACION, TIPO, UNIDAD, DiaSemana, DESTINO, FechaAccess, HoraAccess)
 
 
 	# Guardar los cambios.
